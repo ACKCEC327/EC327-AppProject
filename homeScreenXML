@@ -30,7 +30,7 @@
         android:layout_centerVertical="true"
         android:text="How to Play"
         android:textColor="@android:color/holo_blue_dark"
-        android:background="@android:color/holo_orange_light"
+        android:background="@drawable/homebutton1"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:onClick="viewDirections"/>
@@ -44,7 +44,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="Begin"
-        android:background="@android:color/holo_orange_light"
+        android:background="@drawable/homebutton1"
         android:textColor="@android:color/holo_blue_dark"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
