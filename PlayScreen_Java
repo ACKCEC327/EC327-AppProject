@@ -1,0 +1,35 @@
+package com.ec327.android.tuneplay;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+
+public class PlayScreen extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_play_screen);
+    }
+
+    public void playP1(View view){
+        // code to produce sound when left piano key is clicked
+    }
+
+    public void playP2(View view){
+        // code to produce sound when middle piano key is clicked
+    }
+
+    public void playP3(View view){
+        // code to produce sound when right piano key is clicked
+    }
+
+    public void playG1(View view){
+        // code to produce sound when top guitar string is clicked
+    }
+
+    public void playG2(View view){
+        // code to produce sound when bottom guitar string is clicked
+    }
+
+}
