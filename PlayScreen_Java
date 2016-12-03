@@ -3,6 +3,9 @@ package com.ec327.android.tuneplay;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.media.MediaPlayer;
+
+
 
 public class PlayScreen extends AppCompatActivity {
 
@@ -14,6 +17,10 @@ public class PlayScreen extends AppCompatActivity {
 
     public void playP1(View view){
         // code to produce sound when left piano key is clicked
+        //to make this work, make a folder in "res" called "raw" and enter file downloaded from (and renamed c.mp3):
+        // https://www.freesound.org/people/Tesabob2001/sounds/203478/
+        MediaPlayer p1 = MediaPlayer.create(getApplicationContext(), R.raw.c);
+        p1.start();
     }
 
     public void playP2(View view){
