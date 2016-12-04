@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.ec327.android.tuneplay.PlayScreen">
+    tools:context="com.example.kristof.tuneplay.PlayScreen">
 
     <LinearLayout
         android:id="@+id/drumLayout"
@@ -26,6 +26,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/roundedbuttond1" />
+            android:onClick="playD1"/>
 
         <Button
             android:id="@+id/drumTwo"
@@ -34,6 +35,7 @@
             android:layout_height="match_parent"
             android:layout_marginRight="20dp"
             android:background="@drawable/roundedbuttond2"/>
+            android:onClick="playD2"/>
 
     </LinearLayout>
 
