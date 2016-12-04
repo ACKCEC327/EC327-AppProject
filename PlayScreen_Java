@@ -1,4 +1,4 @@
-package com.ec327.android.tuneplay;
+package com.example.kristof.tuneplay;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,18 +17,20 @@ public class PlayScreen extends AppCompatActivity {
 
     public void playP1(View view){
         // code to produce sound when left piano key is clicked
-        //to make this work, make a folder in "res" called "raw" and enter file downloaded from (and renamed c.mp3):
-        // https://www.freesound.org/people/Tesabob2001/sounds/203478/
         MediaPlayer p1 = MediaPlayer.create(getApplicationContext(), R.raw.c);
         p1.start();
     }
 
     public void playP2(View view){
         // code to produce sound when middle piano key is clicked
+        MediaPlayer p2 = MediaPlayer.create(getApplicationContext(), R.raw.e5);
+        p2.start();
     }
 
     public void playP3(View view){
         // code to produce sound when right piano key is clicked
+        MediaPlayer p3 = MediaPlayer.create(getApplicationContext(), R.raw.g5);
+        p3.start();
     }
 
     public void playG1(View view){
