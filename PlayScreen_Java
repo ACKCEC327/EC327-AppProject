@@ -35,10 +35,25 @@ public class PlayScreen extends AppCompatActivity {
 
     public void playG1(View view){
         // code to produce sound when top guitar string is clicked
+        MediaPlayer g1 = MediaPlayer.create(getApplicationContext(), R.raw.guitarC);
+        g1.start();
     }
 
     public void playG2(View view){
         // code to produce sound when bottom guitar string is clicked
+        MediaPlayer g2 = MediaPlayer.create(getApplicationContext(), R.raw.guitarE);
+        g2.start();
     }
 
+    public void playD1(View view){
+        // code to produce sound when left drum is clicked
+        MediaPlayer d1 = MediaPlayer.create(getApplicationContext(), R.raw.snare);
+        d1.start();
+    }
+
+    public void playD2(View view){
+        // code to produce sound when right drum is clicked
+        MediaPlayer d2 = MediaPlayer.create(getApplicationContext(), R.raw.cymbal);
+        d2.start();
+    }
 }
