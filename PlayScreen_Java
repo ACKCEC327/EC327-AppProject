@@ -17,7 +17,7 @@ public class PlayScreen extends AppCompatActivity {
 
     public void playP1(View view){
         // code to produce sound when left piano key is clicked
-        MediaPlayer p1 = MediaPlayer.create(getApplicationContext(), R.raw.c);
+        MediaPlayer p1 = MediaPlayer.create(getApplicationContext(), R.raw.c5);
         p1.start();
     }
 
