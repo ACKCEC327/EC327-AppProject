@@ -17,12 +17,13 @@ public class HomeScreen extends AppCompatActivity {
     // This method is called when the directions button is pushed
     public void viewDirections(View view) {
         // code to take app to direction screen
-        //View.OnClickListener onClickListener = new View.OnClickListener()
+        Intent goToDir = new Intent(this, directionsScreen.class);
+        startActivity(goToDir);
     }
 
     public void playGame(View view) {
         // response to clicking "How to Play" button
-        Intent intent = new Intent(this, PlayScreen.class);
-        startActivity(intent);
+        Intent goToPlay = new Intent(this, PlayScreen.class);
+        startActivity(goToPlay);
     }
 }
