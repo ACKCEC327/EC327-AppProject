@@ -17,31 +17,31 @@ public class PlayScreen extends AppCompatActivity {
 
     public void playP1(View view){
         // code to produce sound when left piano key is clicked
-        MediaPlayer p1 = MediaPlayer.create(getApplicationContext(), R.raw.c5);
+        MediaPlayer p1 = MediaPlayer.create(getApplicationContext(), R.raw.piano_g3);
         p1.start();
     }
 
     public void playP2(View view){
         // code to produce sound when middle piano key is clicked
-        MediaPlayer p2 = MediaPlayer.create(getApplicationContext(), R.raw.e5);
+        MediaPlayer p2 = MediaPlayer.create(getApplicationContext(), R.raw.piano_a3);
         p2.start();
     }
 
     public void playP3(View view){
         // code to produce sound when right piano key is clicked
-        MediaPlayer p3 = MediaPlayer.create(getApplicationContext(), R.raw.g5);
+        MediaPlayer p3 = MediaPlayer.create(getApplicationContext(), R.raw.piano_b3);
         p3.start();
     }
 
     public void playG1(View view){
         // code to produce sound when top guitar string is clicked
-        MediaPlayer g1 = MediaPlayer.create(getApplicationContext(), R.raw.guitarC);
+        MediaPlayer g1 = MediaPlayer.create(getApplicationContext(), R.raw.guitar_c);
         g1.start();
     }
 
     public void playG2(View view){
         // code to produce sound when bottom guitar string is clicked
-        MediaPlayer g2 = MediaPlayer.create(getApplicationContext(), R.raw.guitarE);
+        MediaPlayer g2 = MediaPlayer.create(getApplicationContext(), R.raw.guitar_d);
         g2.start();
     }
 
