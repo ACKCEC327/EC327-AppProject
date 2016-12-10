@@ -44,6 +44,8 @@ public class PlayScreen extends AppCompatActivity {
                     playD2();
                     break;
             }
+            long delay = 500;
+            sleep(delay);
         }
     }
 
