@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_next_level_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ec327.android.tuneplay.nextLevelScreen">
+
+    <TextView
+        android:id="@+id/niceJobText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nice Job"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="60sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/difficultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's try a more difficult tune..."
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/niceJobText"
+        android:layout_marginTop="40dp" />
+
+    <Button
+        android:id="@+id/nextLevelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/difficultText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/homebutton1"
+        android:text="Next Level"
+        android:textColor="@android:color/holo_blue_dark"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"/>
+
+</RelativeLayout>
