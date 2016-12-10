@@ -1,3 +1,4 @@
+
 package com.example.connor.ec327androidtuneplay;
 
 import android.content.Context;
@@ -24,7 +25,7 @@ public class DirectionsScreen extends AppCompatActivity {
     private LinearLayout dotsLayout;
     private TextView[] dots;
     private int[] layouts;
-    private Button btnHome, btnNext;
+//    private Button btnHome, btnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,14 +37,15 @@ public class DirectionsScreen extends AppCompatActivity {
 
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
-        btnHome = (Button) findViewById(R.id.btn_home);
-        btnNext = (Button) findViewById(R.id.btn_next);
+//        btnHome = (Button) findViewById(R.id.btn_home);
+//        btnNext = (Button) findViewById(R.id.btn_next);
 
         layouts = new int[]{
                 R.layout.activity_direction1,
                 R.layout.activity_direction2,
                 R.layout.activity_direction3,
-                R.layout.activity_direction4};
+                R.layout.activity_direction4,
+                R.layout.activity_direction5};
 
         // adding bottom dots
         addBottomDots(0);
@@ -53,26 +55,30 @@ public class DirectionsScreen extends AppCompatActivity {
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
     }
 
-    public  void btnHomeClick(View v){
-        //int current = getItem(1);
-        //if(current == layouts.length){
-            launchHomeScreen();
-        //}
+//    public  void btnHomeClick(View v){
+//        //int current = getItem(1);
+//        //if(current == layouts.length){
+//            launchHomeScreen();
+//        //}
+//
+//    }
 
+    public void btnPlayClick(View v){
+        launchPlayScreen();
     }
 
-    public  void btnNextClick(View v)
-    {
-        // checking for last page
-        // if last page home screen will be launched
-        int current = getItem(1);
-        if (current < layouts.length) {
-            // move to next screen
-            viewPager.setCurrentItem(current);
-        } else {
-            launchPlayScreen();
-        }
-    }
+//    public  void btnNextClick(View v)
+//    {
+//        // checking for last page
+//        // if last page home screen will be launched
+//        int current = getItem(1);
+//        if (current < layouts.length) {
+//            // move to next screen
+//            viewPager.setCurrentItem(current);
+//        } else {
+//            launchPlayScreen();
+//        }
+//    }
 
     ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
 
@@ -80,16 +86,16 @@ public class DirectionsScreen extends AppCompatActivity {
         public void onPageSelected(int position) {
             addBottomDots(position);
 
-            // changing the next button text 'NEXT' / 'GOT IT'
-            if (position == layouts.length - 1) {
-                // last page. make button text to GOT IT
-                btnNext.setText("Play");
-                btnHome.setVisibility(View.GONE);
-            } else {
-                // still pages are left
-                btnNext.setText("Next");
-                btnHome.setVisibility(View.VISIBLE);
-            }
+//            // changing the next button text 'NEXT' / 'GOT IT'
+//            if (position == layouts.length - 1) {
+//                // last page. make button text to GOT IT
+//                btnNext.setText("Play");
+//                btnHome.setVisibility(View.GONE);
+//            } else {
+//                // still pages are left
+//                btnNext.setText("Next");
+//                btnHome.setVisibility(View.VISIBLE);
+//            }
         }
 
         @Override
@@ -116,7 +122,7 @@ public class DirectionsScreen extends AppCompatActivity {
         }
 
         if (dots.length > 0)
-            dots[currentPage].setTextColor(Color.parseColor("#FAFAFA"));
+            dots[currentPage].setTextColor(Color.parseColor("#01579B"));
     }
 
 
@@ -171,3 +177,4 @@ public class DirectionsScreen extends AppCompatActivity {
         }
     }
 }
+
