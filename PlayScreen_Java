@@ -37,13 +37,13 @@ public class PlayScreen extends AppCompatActivity {
         }
     }
 
-    public void playButtonFunc(){
+    public void showMe(){
         int Size = 3;
-        showMe(CurrentSong, Size);
+        playSongFunc(CurrentSong, Size);
     }
 
 
-    public void showMe(int[] CurrentSong, int Size){
+    public void playSongFunc(int[] CurrentSong, int Size){
         for(int i = 0; i<Size; i=i+1){
             switch(CurrentSong[i]) {
                 case 1:
