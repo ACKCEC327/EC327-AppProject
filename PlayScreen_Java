@@ -184,31 +184,29 @@ public class PlayScreen extends AppCompatActivity {
     }
 
     public void playSongFunc(int[] CurrentSong, int Size){
-        //if(donePlaying == false){
-            for(int i = 0; i<Size; i=i+1){
-                switch(CurrentSong[i]) {
-                    case 1:
-                        playP1(findViewById(R.id.pianoOne));
-                        break;
-                    case 2:
-                        playP2(findViewById(R.id.pianoTwo));
-                        break;
-                    case 3:
-                        playP3(findViewById(R.id.pianoThree));
-                        break;
-                    case 4:
-                        playG1(findViewById(R.id.guitarOne));
-                        break;
-                    case 5:
-                        playG2(findViewById(R.id.guitarTwo));
-                        break;
-                    case 6:
-                        playD1(findViewById(R.id.drumOne));
-                        break;
-                    case 7:
-                        playD2(findViewById(R.id.drumTwo));
-                        break;
-                }
+        for(int i = 0; i<Size; i=i+1){
+            switch(CurrentSong[i]) {
+                case 1:
+                    playP1(findViewById(R.id.pianoOne));
+                    break;
+                case 2:
+                    playP2(findViewById(R.id.pianoTwo));
+                    break;
+                case 3:
+                    playP3(findViewById(R.id.pianoThree));
+                    break;
+                case 4:
+                    playG1(findViewById(R.id.guitarOne));
+                    break;
+                case 5:
+                    playG2(findViewById(R.id.guitarTwo));
+                    break;
+                case 6:
+                    playD1(findViewById(R.id.drumOne));
+                    break;
+                case 7:
+                    playD2(findViewById(R.id.drumTwo));
+                    break;
             }
 
             try {
@@ -217,8 +215,9 @@ public class PlayScreen extends AppCompatActivity {
             catch(InterruptedException ex) {
                 Thread.currentThread().interrupt();
             }
-            donePlaying = true;
-        //}
+
+        }
+        donePlaying = true;
     }
 
     public void showMe(View view){
@@ -247,9 +246,9 @@ public class PlayScreen extends AppCompatActivity {
         }
         else {
             //Go to Game Over
-            HomeScreen.level = 1;
             Intent goToGameOver = new Intent(this, gameOverScreen.class);
             startActivity(goToGameOver);
         }
     }
 }
+
