@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.media.MediaPlayer;
 import android.widget.Button;
-
+import com.ec327.android.tuneplay.HomeScreen;
 import java.util.Random;
 
 
@@ -18,27 +18,46 @@ public class PlayScreen extends AppCompatActivity {
     int Count = 0;
     boolean donePlaying = false;
 
+    // get level number with dot operator: HomeScreen.level
+    // level is initialized to 1 when Home Screen is created
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_screen);
 
-        //Creates arrays representing the songs for level 1
-        int[] L1Song1 = {1, 2, 3};
-        int[] L1Song2 = {4, 5, 6};
-        int[] L1Song3 = {7, 1, 5};
+        //Initialize Song Arrays
+        int[] Song1 = new int[0];
+        int[] Song2 = new int[0];
+        int[] Song3 = new int[0];
+
+        if(HomeScreen.level == 1) {
+            //Creates arrays representing the songs for level 1
+            Song1 = new int[]{1, 2, 3};
+            Song2 = new int[]{4, 5, 6};
+            Song3 = new int[]{5, 1, 5};
+            Size = 3;
+
+        }
+        else if(HomeScreen.level == 2) {
+            //Creates arrays representing the songs for level 2
+            Song1 = new int[]{1, 2, 3, 2, 1, 6};
+            Song2 = new int[]{4, 4, 5, 6, 6, 5};
+            Song3 = new int[]{1, 5, 4, 1, 2, 3};
+            Size = 6;
+        }
 
         //Randomly plays one of the songs
         Random randGen = new Random();
         int randInt = randGen.nextInt(3);
         if(randInt == 0){
-            songArray = L1Song1;
+            songArray = Song1;
         }
         else if(randInt == 1){
-            songArray = L1Song2;
+            songArray = Song2;
         }
         else if(randInt == 2) {
-            songArray = L1Song3;
+            songArray = Song3;
         }
     }
 
@@ -144,7 +163,6 @@ public class PlayScreen extends AppCompatActivity {
 
     public void showMe(View view){
         // code to show user the tune
-        Size = 3;
         playSongFunc(songArray, Size);
     }
 
@@ -155,6 +173,7 @@ public class PlayScreen extends AppCompatActivity {
             Count = Count+1;
             if(Count == Size){
                 //Next level screen
+                HomeScreen.level = HomeScreen.level + 1;
                 Intent goToNextLevel = new Intent(this, nextLevelScreen.class);
                 startActivity(goToNextLevel);
             }
