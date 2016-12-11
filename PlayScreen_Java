@@ -246,6 +246,7 @@ public class PlayScreen extends AppCompatActivity {
         }
         else {
             //Go to Game Over
+            HomeScreen.level = 1;
             Intent goToGameOver = new Intent(this, gameOverScreen.class);
             startActivity(goToGameOver);
         }
