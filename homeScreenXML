@@ -29,6 +29,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="How to Play"
+        android:textSize="15sp"
         android:textColor="@android:color/holo_blue_dark"
         android:background="@drawable/homebutton1"
         android:paddingLeft="20dp"
@@ -36,14 +37,30 @@
         android:onClick="viewDirections"/>
 
     <Button
+        android:id="@+id/practiceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Practice"
+        android:textSize="15sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:background="@drawable/homebutton1"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/directionsButton"
+        android:layout_centerHorizontal="true"
+        android:onClick="practice"/>
+
+    <Button
         android:id="@+id/playButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/directionsButton"
+        android:layout_below="@id/practiceButton"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="Begin"
+        android:textSize="15sp"
         android:background="@drawable/homebutton1"
         android:textColor="@android:color/holo_blue_dark"
         android:paddingLeft="20dp"
