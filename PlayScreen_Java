@@ -10,10 +10,10 @@ import java.util.Random;
 
 public class PlayScreen extends AppCompatActivity {
 
-    int[] CurrentSong;
+    int[] songArray;
     int Size;
     int Count = 0;
-    //boolean donePlaying = false;
+    boolean donePlaying = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,19 +29,19 @@ public class PlayScreen extends AppCompatActivity {
         Random randGen = new Random();
         int randInt = randGen.nextInt(3);
         if(randInt == 0){
-            CurrentSong = L1Song1;
+            songArray = L1Song1;
         }
         else if(randInt == 1){
-            CurrentSong = L1Song2;
+            songArray = L1Song2;
         }
         else if(randInt == 2) {
-            CurrentSong = L1Song3;
+            songArray = L1Song3;
         }
     }
 
     public void showMe(){
         Size = 3;
-        playSongFunc(CurrentSong, Size);
+        playSongFunc(songArray, Size);
     }
 
 
@@ -70,62 +70,86 @@ public class PlayScreen extends AppCompatActivity {
                     playD2();
                     break;
             }
-            long delay = 500;
-            sleep(delay);
+
+            try {
+                Thread.sleep(1000);
+            }
+            catch(InterruptedException ex) {
+                Thread.currentThread().interrupt();
+            }
+
         }
+        donePlaying = true;
     }
 
     public void playP1(){
         // code to produce sound when left piano key is clicked
         MediaPlayer p1 = MediaPlayer.create(getApplicationContext(), R.raw.piano_g3);
         p1.start();
-        check(1);
+        if(donePlaying == true) {
+            check(1);
+        }
     }
 
     public void playP2(){
         // code to produce sound when middle piano key is clicked
         MediaPlayer p2 = MediaPlayer.create(getApplicationContext(), R.raw.piano_a3);
         p2.start();
-        check(2);
+        if(donePlaying == true) {
+            check(2);
+        }
     }
 
     public void playP3(){
         // code to produce sound when right piano key is clicked
         MediaPlayer p3 = MediaPlayer.create(getApplicationContext(), R.raw.piano_b3);
         p3.start();
-        check(3);
+        if(donePlaying == true) {
+            check(3);
+        }
     }
 
     public void playG1(){
         // code to produce sound when top guitar string is clicked
         MediaPlayer g1 = MediaPlayer.create(getApplicationContext(), R.raw.guitar_c);
         g1.start();
-        check(4);
+        if(donePlaying == true) {
+            check(4);
+        }
     }
 
     public void playG2(){
         // code to produce sound when bottom guitar string is clicked
         MediaPlayer g2 = MediaPlayer.create(getApplicationContext(), R.raw.guitar_d);
         g2.start();
-        check(5);
+        if(donePlaying == true) {
+            check(5);
+        }
     }
 
     public void playD1(){
         // code to produce sound when left drum is clicked
         MediaPlayer d1 = MediaPlayer.create(getApplicationContext(), R.raw.snare);
         d1.start();
-        check(6);
+        if(donePlaying == true) {
+            check(6);
+        }
     }
 
     public void playD2(){
         // code to produce sound when right drum is clicked
         MediaPlayer d2 = MediaPlayer.create(getApplicationContext(), R.raw.cymbal);
         d2.start();
-        check(7);
+        if(donePlaying == true) {
+            check(7);
+        }
     }
 
-    boolean check(int butpress){
+    void check(int butpress){
         // checks user input against array
-
+        if(butpress == songArray[Count]){
+            Count = Count+1;
+            
+        }
     }
 }
