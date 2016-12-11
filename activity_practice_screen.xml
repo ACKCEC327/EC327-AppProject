@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/activity_play_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kristof.tuneplay.PlayScreen">
+
+    <LinearLayout
+        android:id="@+id/drumLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:paddingTop="20dp">
+
+        <Button
+            android:id="@+id/drumOne"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/roundedbuttond1"
+            android:onClick="playD1"/>
+
+        <Button
+            android:id="@+id/drumTwo"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginRight="35dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/roundedbuttond2"
+            android:onClick="playD2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/guitarLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <Button
+            android:id="@+id/guitarOne"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/roundedbuttong1"
+            android:onClick="playG1"/>
+
+        <Button
+            android:id="@+id/guitarTwo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/roundedbuttong2"
+            android:onClick="playG2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pianoLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+        <Button
+            android:id="@+id/pianoOne"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/roundedbuttonp1"
+            android:onClick="playP1"/>
+
+        <Button
+            android:id="@+id/pianoTwo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/roundedbuttonp2"
+            android:onClick="playP2" />
+
+        <Button
+            android:id="@+id/pianoThree"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/roundedbuttonp3"
+            android:onClick="playP3"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/holo_orange_light"
+            android:text="Play Game!"
+            android:textSize="20sp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:onClick="playGame"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:text="Try different buttons for practice!"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+</LinearLayout>
