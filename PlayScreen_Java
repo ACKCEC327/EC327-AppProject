@@ -149,7 +149,12 @@ public class PlayScreen extends AppCompatActivity {
         // checks user input against array
         if(butpress == songArray[Count]){
             Count = Count+1;
-
+            if(Count == Size){
+                //Next level screen
+            }
+        }
+        else {
+            // Game Over
         }
     }
 }
