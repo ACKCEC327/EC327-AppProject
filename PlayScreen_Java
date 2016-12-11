@@ -184,7 +184,7 @@ public class PlayScreen extends AppCompatActivity {
     }
 
     public void playSongFunc(int[] CurrentSong, int Size){
-        if(!donePlaying){
+        //if(donePlaying == false){
             for(int i = 0; i<Size; i=i+1){
                 switch(CurrentSong[i]) {
                     case 1:
@@ -218,7 +218,7 @@ public class PlayScreen extends AppCompatActivity {
                 Thread.currentThread().interrupt();
             }
             donePlaying = true;
-        }
+        //}
     }
 
     public void showMe(View view){
