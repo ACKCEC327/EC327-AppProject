@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.media.MediaPlayer;
 import java.util.Random;
+import android.content.Intent;
 
 
 
@@ -151,10 +152,14 @@ public class PlayScreen extends AppCompatActivity {
             Count = Count+1;
             if(Count == Size){
                 //Next level screen
+                Intent goToNextLevel = new Intent(this, nextLevelScreen.class);
+                startActivity(goToNextLevel);
             }
         }
         else {
             // Game Over
+            Intent goToGameOver = new Intent(this, gameOverScreen.class);
+            startActivity(goToGameOver);
         }
     }
 }
