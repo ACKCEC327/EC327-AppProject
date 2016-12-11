@@ -86,7 +86,7 @@ public class PlayScreen extends AppCompatActivity {
         // code to produce sound when left piano key is clicked
         MediaPlayer p1 = MediaPlayer.create(getApplicationContext(), R.raw.piano_g3);
         p1.start();
-        if(donePlaying == true) {
+        if(donePlaying) {
             check(1);
         }
     }
@@ -95,7 +95,7 @@ public class PlayScreen extends AppCompatActivity {
         // code to produce sound when middle piano key is clicked
         MediaPlayer p2 = MediaPlayer.create(getApplicationContext(), R.raw.piano_a3);
         p2.start();
-        if(donePlaying == true) {
+        if(donePlaying) {
             check(2);
         }
     }
@@ -104,7 +104,7 @@ public class PlayScreen extends AppCompatActivity {
         // code to produce sound when right piano key is clicked
         MediaPlayer p3 = MediaPlayer.create(getApplicationContext(), R.raw.piano_b3);
         p3.start();
-        if(donePlaying == true) {
+        if(donePlaying) {
             check(3);
         }
     }
@@ -113,7 +113,7 @@ public class PlayScreen extends AppCompatActivity {
         // code to produce sound when top guitar string is clicked
         MediaPlayer g1 = MediaPlayer.create(getApplicationContext(), R.raw.guitar_c);
         g1.start();
-        if(donePlaying == true) {
+        if(donePlaying) {
             check(4);
         }
     }
@@ -122,7 +122,7 @@ public class PlayScreen extends AppCompatActivity {
         // code to produce sound when bottom guitar string is clicked
         MediaPlayer g2 = MediaPlayer.create(getApplicationContext(), R.raw.guitar_d);
         g2.start();
-        if(donePlaying == true) {
+        if(donePlaying) {
             check(5);
         }
     }
@@ -131,7 +131,7 @@ public class PlayScreen extends AppCompatActivity {
         // code to produce sound when left drum is clicked
         MediaPlayer d1 = MediaPlayer.create(getApplicationContext(), R.raw.snare);
         d1.start();
-        if(donePlaying == true) {
+        if(donePlaying) {
             check(6);
         }
     }
@@ -140,7 +140,7 @@ public class PlayScreen extends AppCompatActivity {
         // code to produce sound when right drum is clicked
         MediaPlayer d2 = MediaPlayer.create(getApplicationContext(), R.raw.cymbal);
         d2.start();
-        if(donePlaying == true) {
+        if(donePlaying) {
             check(7);
         }
     }
@@ -149,7 +149,7 @@ public class PlayScreen extends AppCompatActivity {
         // checks user input against array
         if(butpress == songArray[Count]){
             Count = Count+1;
-            
+
         }
     }
 }
