@@ -11,7 +11,9 @@ import java.util.Random;
 public class PlayScreen extends AppCompatActivity {
 
     int[] CurrentSong;
-    int butPress = 0;
+    int Size;
+    int Count = 0;
+    //boolean donePlaying = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +40,7 @@ public class PlayScreen extends AppCompatActivity {
     }
 
     public void showMe(){
-        int Size = 3;
+        Size = 3;
         playSongFunc(CurrentSong, Size);
     }
 
@@ -71,55 +73,59 @@ public class PlayScreen extends AppCompatActivity {
             long delay = 500;
             sleep(delay);
         }
-        butPress = 0;
     }
 
     public void playP1(){
         // code to produce sound when left piano key is clicked
         MediaPlayer p1 = MediaPlayer.create(getApplicationContext(), R.raw.piano_g3);
         p1.start();
-        butPress = 1;
+        check(1);
     }
 
     public void playP2(){
         // code to produce sound when middle piano key is clicked
         MediaPlayer p2 = MediaPlayer.create(getApplicationContext(), R.raw.piano_a3);
         p2.start();
-        butPress = 2;
+        check(2);
     }
 
     public void playP3(){
         // code to produce sound when right piano key is clicked
         MediaPlayer p3 = MediaPlayer.create(getApplicationContext(), R.raw.piano_b3);
         p3.start();
-        butPress = 3;
+        check(3);
     }
 
     public void playG1(){
         // code to produce sound when top guitar string is clicked
         MediaPlayer g1 = MediaPlayer.create(getApplicationContext(), R.raw.guitar_c);
         g1.start();
-        butPress = 4;
+        check(4);
     }
 
     public void playG2(){
         // code to produce sound when bottom guitar string is clicked
         MediaPlayer g2 = MediaPlayer.create(getApplicationContext(), R.raw.guitar_d);
         g2.start();
-        butPress = 5;
+        check(5);
     }
 
     public void playD1(){
         // code to produce sound when left drum is clicked
         MediaPlayer d1 = MediaPlayer.create(getApplicationContext(), R.raw.snare);
         d1.start();
-        butPress = 6;
+        check(6);
     }
 
     public void playD2(){
         // code to produce sound when right drum is clicked
         MediaPlayer d2 = MediaPlayer.create(getApplicationContext(), R.raw.cymbal);
         d2.start();
-        butPress = 7;
+        check(7);
+    }
+
+    boolean check(int butpress){
+        // checks user input against array
+
     }
 }
