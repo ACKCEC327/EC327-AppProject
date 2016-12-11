@@ -1,19 +1,29 @@
-package com.example.kristof.tuneplay;
+package com.ec327.android.tuneplay;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.media.MediaPlayer;
-
-
 
 public class PracticeScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_play_screen);
+        setContentView(R.layout.activity_practice_screen);
+    }
+
+    public void backHome(View view){
+        // takes user back to Home Screen
+        Intent goHome = new Intent(this, HomeScreen.class);
+        startActivity(goHome);
+    }
+
+    public void playGame(View view){
+        // Starts game
+        Intent gamePlay = new Intent(this, PlayScreen.class);
+        startActivity(gamePlay);
     }
 
     public void playP1(View view){
@@ -56,11 +66,5 @@ public class PracticeScreen extends AppCompatActivity {
         // code to produce sound when right drum is clicked
         MediaPlayer d2 = MediaPlayer.create(getApplicationContext(), R.raw.cymbal);
         d2.start();
-    }
-
-    public void playGame(View view) {
-        // response to clicking "How to Play" button
-        Intent goToPlay = new Intent(this, PlayScreen.class);
-        startActivity(goToPlay);
     }
 }
