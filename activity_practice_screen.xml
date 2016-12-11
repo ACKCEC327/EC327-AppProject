@@ -5,7 +5,7 @@
     android:id="@+id/activity_play_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.kristof.tuneplay.PlayScreen">
+    tools:context="com.example.kristof.tuneplay.PracticeScreen">
 
     <LinearLayout
         android:id="@+id/drumLayout"
