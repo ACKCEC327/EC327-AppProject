@@ -64,7 +64,7 @@ public class PracticeScreen extends AppCompatActivity {
 
     public void playD2(View view){
         // code to produce sound when right drum is clicked
-        MediaPlayer d2 = MediaPlayer.create(getApplicationContext(), R.raw.cymbal);
+        MediaPlayer d2 = MediaPlayer.create(getApplicationContext(), R.raw.bass);
         d2.start();
     }
 }
