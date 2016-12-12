@@ -14,7 +14,7 @@ public class WonGameScreen extends AppCompatActivity {
     }
 
     public void practice(View view){
-        // practice playing the instruments
+        // Go to PracticeScreen to practice playing the instruments
         Intent goBackToHome = new Intent(this, HomeScreen.class);
         startActivity(goBackToHome);
     }
