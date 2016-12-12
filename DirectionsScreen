@@ -45,7 +45,9 @@ public class DirectionsScreen extends AppCompatActivity {
                 R.layout.activity_direction2,
                 R.layout.activity_direction3,
                 R.layout.activity_direction4,
-                R.layout.activity_direction5};
+                R.layout.activity_direction5,
+                R.layout.activity_direction6,
+                R.layout.activity_direction7};
 
         // adding bottom dots
         addBottomDots(0);
@@ -177,4 +179,6 @@ public class DirectionsScreen extends AppCompatActivity {
         }
     }
 }
+
+
 
