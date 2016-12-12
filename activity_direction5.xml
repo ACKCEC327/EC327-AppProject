@@ -14,35 +14,29 @@
 
     <RelativeLayout
         android:layout_width="300dp"
-        android:layout_height="150dp"
+        android:layout_height="300dp"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:background = "@drawable/homebutton1"
         android:layout_marginBottom = "15dp"
         android:id="@+id/pictureWindow">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Are you ready to rumble?"
-            android:textColor="@android:color/holo_blue_dark"
-            android:textSize="25sp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:id="@+id/rumbleText"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/directionbutton"
-            android:text="Play"
-            android:textColor="@android:color/holo_orange_light"
-            android:layout_below="@id/rumbleText"
-            android:onClick="btnPlayClick"/>
-
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/gameover" />
     </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below = "@id/pictureWindow"
+        android:layout_centerHorizontal="true"
+        android:text="If you play back the tune incorrectly... GAME OVER! You can either play again or return to the home screen."
+        android:textAlignment="center"
+        android:paddingBottom="10dp"/>
 
 
 </RelativeLayout>
+
