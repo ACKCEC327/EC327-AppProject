@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,7 +18,7 @@
             android:layout_height="300dp"
             android:layout_centerHorizontal="true"
             android:background = "@drawable/homebutton1"
-            android:layout_marginBottom = "15dp"
+            android:layout_marginBottom = "10dp"
             android:id="@+id/pictureWindow">
 
 
@@ -25,7 +26,7 @@
                 android:layout_width="300dp"
                 android:layout_height="250dp"
                 android:layout_centerInParent="true"
-                android:src="@drawable/playscreen1" />
+                android:src="@drawable/practicescreen" />
         </RelativeLayout>
 
     <TextView
@@ -33,8 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_below = "@id/pictureWindow"
         android:layout_centerHorizontal="true"
-        android:text="This is Tune Play's Game Screen. There are two drums (top), two guitar strings (middle), and three piano keys (bottom)."
+        android:text="This is Tune Play's Practice Screen. There are two drums (top), two guitar strings (middle), and three piano keys (bottom). This screen allows you to get acquainted with the buttons you'll need to press during gameplay"
         android:textAlignment="center"
-        android:paddingBottom="10dp"/>
+        android:paddingBottom="0dp"/>
 
 </RelativeLayout>
