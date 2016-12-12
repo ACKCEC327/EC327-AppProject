@@ -1,4 +1,4 @@
-?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -21,7 +21,7 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:layout_marginLeft="35dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="5dp"
             android:background="@drawable/roundedbuttond1"
             android:onClick="playD1"/>
 
@@ -31,7 +31,7 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:layout_marginRight="35dp"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="5dp"
             android:background="@drawable/roundedbuttond2"
             android:onClick="playD2"/>
 
@@ -116,7 +116,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="20dp"
             android:background="@android:color/holo_orange_light"
-            android:text="Show me the tune"
+            android:text="Play Tune"
             android:textSize="20sp"
             android:textColor="@android:color/holo_blue_dark"
             android:onClick="showMe"/>
@@ -128,6 +128,7 @@
             android:layout_marginTop="20dp"
             android:text="Your turn"
             android:textAlignment="center"
+            android:paddingTop="10dp"
             android:textColor="@android:color/holo_blue_dark"
             android:textSize="20sp"/>
     </LinearLayout>
