@@ -25,7 +25,7 @@
             android:layout_width="300dp"
             android:layout_height="250dp"
             android:layout_centerInParent="true"
-            android:src="@drawable/nextlevel" />
+            android:src="@drawable/playscreen2" />
     </RelativeLayout>
 
     <TextView
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_below = "@id/pictureWindow"
         android:layout_centerHorizontal="true"
-        android:text="If you play the tune back correctly, you will move on to the next level. Each level gets progressively harder."
+        android:text="The PLAY TUNE button will then disappear and you will need to correctly reproduce the tune you just heard"
         android:textAlignment="center"
         android:paddingBottom="10dp"/>
 
