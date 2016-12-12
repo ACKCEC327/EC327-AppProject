@@ -6,13 +6,13 @@ Instructions in how to run TunePlay:
 Files that must be put in drawable folder (within res folder):
 
   Layouts:
-  - direction1.xml
-  - direction2.xml
-  - direction3.xml
-  - direction4.xml
-  - direction5.xml
-  - direction6.xml
-  - direction7.xml
+  - activity_direction1.xml
+  - activity_direction2.xml
+  - activity_direction3.xml
+  - activity_direction4.xml
+  - activity_direction5.xml
+  - activity_direction6.xml
+  - activity_direction7.xml
 
   Button Layouts:
   - drawable.roundedbuttond1.xml
