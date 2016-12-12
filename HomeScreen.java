@@ -15,26 +15,24 @@ public class HomeScreen extends AppCompatActivity{
 
     }
 
-    public static int level = 1; // level variable, used in PlayScreen.java
+    public static int level = 1; // Initializes global level variable, used in PlayScreen.java to change levels
 
     // This method is called when the directions button is pushed
     public void viewDirections(View view) {
-        // code to take app to direction screen
-        Intent goToDir = new Intent(this, directionsScreen.class);
+        // Goes to DirectionScreen to show user how to play
+        Intent goToDir = new Intent(this, DirectionsScreen.class);
         startActivity(goToDir);
     }
 
     public void practice(View view){
-        // practice playing the instruments
+        // Goes to PracticeScreen to practice playing the instruments
         Intent goToPrac = new Intent(this, PracticeScreen.class);
         startActivity(goToPrac);
     }
 
     public void playGame(View view) {
-        // response to clicking "How to Play" button
-        Intent goToPlay;
-        goToPlay = new Intent(this, PlayScreen.class);
+        // Goes to PlayScreen to start playing game
+        Intent goToPlay = new Intent(this, PlayScreen.class);
         startActivity(goToPlay);
-
     }
 }
