@@ -25,7 +25,7 @@
             android:layout_width="300dp"
             android:layout_height="250dp"
             android:layout_centerInParent="true"
-            android:src="@drawable/playscreen2" />
+            android:src="@drawable/playscreen1" />
     </RelativeLayout>
 
     <TextView
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_below = "@id/pictureWindow"
         android:layout_centerHorizontal="true"
-        android:text="Tune Play will play you a tune, the instrument buttons lighting up when played (see bottom right piano key). You will then need to play the tune back from memory."
+        android:text="This is the Play Screen. You will first press the PLAY TUNE button for TunePlay to play you a tune to reproduce."
         android:textAlignment="center"
         android:paddingBottom="10dp"/>
 
