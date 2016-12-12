@@ -1,5 +1,4 @@
-
-package com.example.connor.ec327androidtuneplay;
+package com.ec327.android.tuneplay;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,18 +13,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class DirectionsScreen extends AppCompatActivity {
+/*****
+ Template code for directionsScreen.java was obtained online. This code is responsible for creating
+ the dot layout and swiping capabilites seen in the Directions portion of this app. The code was
+ manipulated by us in order to fit the needs of our app.
+ */
+
+public class directionsScreen extends AppCompatActivity {
 
     private ViewPager viewPager;
     private ViewPagerAdapter viewPagerAdapter;
-    private LinearLayout dotsLayout;
+    private LinearLayout dotsLayout; // dots at bottom of screen
     private TextView[] dots;
     private int[] layouts;
-//    private Button btnHome, btnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +40,9 @@ public class DirectionsScreen extends AppCompatActivity {
 
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
-//        btnHome = (Button) findViewById(R.id.btn_home);
-//        btnNext = (Button) findViewById(R.id.btn_next);
 
+        // declares array of activity screens
+        // each array element is one of the direction layouts
         layouts = new int[]{
                 R.layout.activity_direction1,
                 R.layout.activity_direction2,
@@ -48,56 +51,26 @@ public class DirectionsScreen extends AppCompatActivity {
                 R.layout.activity_direction5,
                 R.layout.activity_direction6,
                 R.layout.activity_direction7};
-
-        // adding bottom dots
+        
         addBottomDots(0);
 
         viewPagerAdapter = new ViewPagerAdapter();
         viewPager.setAdapter(viewPagerAdapter);
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
     }
-
-//    public  void btnHomeClick(View v){
-//        //int current = getItem(1);
-//        //if(current == layouts.length){
-//            launchHomeScreen();
-//        //}
-//
-//    }
-
+    
+    // this method is called when the Play button is clicked on the last direction layout (#7)
     public void btnPlayClick(View v){
-        launchPlayScreen();
+        Intent goToDir = new Intent(this, PlayScreen.class);
+        startActivity(goToDir);
     }
-
-//    public  void btnNextClick(View v)
-//    {
-//        // checking for last page
-//        // if last page home screen will be launched
-//        int current = getItem(1);
-//        if (current < layouts.length) {
-//            // move to next screen
-//            viewPager.setCurrentItem(current);
-//        } else {
-//            launchPlayScreen();
-//        }
-//    }
+    
 
     ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
 
         @Override
         public void onPageSelected(int position) {
             addBottomDots(position);
-
-//            // changing the next button text 'NEXT' / 'GOT IT'
-//            if (position == layouts.length - 1) {
-//                // last page. make button text to GOT IT
-//                btnNext.setText("Play");
-//                btnHome.setVisibility(View.GONE);
-//            } else {
-//                // still pages are left
-//                btnNext.setText("Next");
-//                btnHome.setVisibility(View.VISIBLE);
-//            }
         }
 
         @Override
@@ -113,8 +86,10 @@ public class DirectionsScreen extends AppCompatActivity {
 
     private void addBottomDots(int currentPage) {
         dots = new TextView[layouts.length];
-
+        
         dotsLayout.removeAllViews();
+        
+        // makes all of the dots gray
         for (int i = 0; i < dots.length; i++) {
             dots[i] = new TextView(this);
             dots[i].setText(Html.fromHtml("&#8226;"));
@@ -123,12 +98,13 @@ public class DirectionsScreen extends AppCompatActivity {
             dotsLayout.addView(dots[i]);
         }
 
+        // for current page, turns active dot blue
         if (dots.length > 0)
             dots[currentPage].setTextColor(Color.parseColor("#01579B"));
     }
 
 
-
+/*
     private int getItem(int i) {
         return viewPager.getCurrentItem() + i;
     }
@@ -137,11 +113,7 @@ public class DirectionsScreen extends AppCompatActivity {
         Intent goToDir = new Intent(this, HomeScreen.class);
         startActivity(goToDir);
     }
-
-    private void launchPlayScreen(){
-        Intent goToDir = new Intent(this, PlayScreen.class);
-        startActivity(goToDir);
-    }
+*/
 
     public class ViewPagerAdapter extends PagerAdapter {
         private LayoutInflater layoutInflater;
@@ -179,6 +151,3 @@ public class DirectionsScreen extends AppCompatActivity {
         }
     }
 }
-
-
-
