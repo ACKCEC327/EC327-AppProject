@@ -15,7 +15,8 @@ public class HomeScreen extends AppCompatActivity{
 
     }
 
-    public static int level = 1; // Initializes global level variable, used in PlayScreen.java to change levels
+    // Initializes global level variable, used in PlayScreen.java to change levels
+    public static int level = 1; 
 
     // This method is called when the directions button is pushed
     public void viewDirections(View view) {
