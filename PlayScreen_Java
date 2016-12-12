@@ -99,7 +99,7 @@ public class PlayScreen extends AppCompatActivity {
                 break;
             case 7:
                 //Creates arrays representing the songs for level 7
-                Song1 = new int[]{6, 6, 6, 1, 2, 3, 2};
+                Song1 = new int[]{4, 4, 4, 1, 2, 2, 1}; //"Old McDonald had a Farm"
                 Song2 = new int[]{5, 5, 1, 2, 3, 4, 5}; //Exerpt from "National Anthem"
                 Song3 = new int[]{1, 2, 6, 3, 2, 6, 4};
                 Size = 7;
@@ -108,7 +108,7 @@ public class PlayScreen extends AppCompatActivity {
                 //Creates arrays representing the songs for level 8
                 Song1 = new int[]{4, 4, 1, 1, 2, 2, 1}; //"Twinkle, Twinkle"
                 Song2 = new int[]{6, 5, 2, 4, 5, 4, 6};
-                Song3 = new int[]{1, 5, 4, 3, 2, 1, 2};
+                Song3 = new int[]{3, 2, 1, 2, 3, 3, 3}; //"Mary Had a Little Lamb"
                 Size = 7;
                 break;
             case 9:
