@@ -6,12 +6,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import java.io.IOException;
+
 public class PracticeScreen extends AppCompatActivity {
+
+    //Initialize MediaPlayer instrument sounds
+    private static MediaPlayer p1;
+    private static MediaPlayer p2;
+    private static MediaPlayer p3;
+    private static MediaPlayer g1;
+    private static MediaPlayer g2;
+    private static MediaPlayer d1;
+    private static MediaPlayer d2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_practice_screen);
+
+        p1 = MediaPlayer.create(getApplicationContext(), R.raw.piano_g3);
+        p2 = MediaPlayer.create(getApplicationContext(), R.raw.piano_a3);
+        p3 = MediaPlayer.create(getApplicationContext(), R.raw.piano_b3);
+        g1 = MediaPlayer.create(getApplicationContext(), R.raw.guitar_c);
+        g2 = MediaPlayer.create(getApplicationContext(), R.raw.guitar_d);
+        d1 = MediaPlayer.create(getApplicationContext(), R.raw.snare);
+        d2 = MediaPlayer.create(getApplicationContext(), R.raw.bass);
     }
 
     public void backHome(View view){
@@ -26,45 +46,97 @@ public class PracticeScreen extends AppCompatActivity {
         startActivity(gamePlay);
     }
 
-    public void playP1(View view){
+    public void playP1(View view) throws IOException {
         // code to produce sound when left piano key is clicked
-        MediaPlayer p1 = MediaPlayer.create(getApplicationContext(), R.raw.piano_g3);
-        p1.start();
+        p1.start(); // play sound
+
+        // delay for .5 seconds
+        try {
+            Thread.sleep(500);
+        }
+        catch(InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
+        p1.stop(); // stop sound
+        p1.prepare(); // prepare sound to start again upon next method call
+
     }
 
-    public void playP2(View view){
+    public void playP2(View view) throws IOException {
         // code to produce sound when middle piano key is clicked
-        MediaPlayer p2 = MediaPlayer.create(getApplicationContext(), R.raw.piano_a3);
         p2.start();
+        try {
+            Thread.sleep(500);
+        }
+        catch(InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
+        p2.stop();
+        p2.prepare();
     }
 
-    public void playP3(View view){
+    public void playP3(View view) throws IOException {
         // code to produce sound when right piano key is clicked
-        MediaPlayer p3 = MediaPlayer.create(getApplicationContext(), R.raw.piano_b3);
         p3.start();
+        try {
+            Thread.sleep(500);
+        }
+        catch(InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
+        p3.stop();
+        p3.prepare();
     }
 
-    public void playG1(View view){
+    public void playG1(View view) throws IOException {
         // code to produce sound when top guitar string is clicked
-        MediaPlayer g1 = MediaPlayer.create(getApplicationContext(), R.raw.guitar_c);
         g1.start();
+        try {
+            Thread.sleep(500);
+        }
+        catch(InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
+        g1.stop();
+        g1.prepare();
     }
 
-    public void playG2(View view){
+    public void playG2(View view) throws IOException {
         // code to produce sound when bottom guitar string is clicked
-        MediaPlayer g2 = MediaPlayer.create(getApplicationContext(), R.raw.guitar_d);
         g2.start();
+        try {
+            Thread.sleep(500);
+        }
+        catch(InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
+        g2.stop();
+        g2.prepare();
     }
 
-    public void playD1(View view){
+    public void playD1(View view) throws IOException {
         // code to produce sound when left drum is clicked
-        MediaPlayer d1 = MediaPlayer.create(getApplicationContext(), R.raw.snare);
         d1.start();
+        try {
+            Thread.sleep(500);
+        }
+        catch(InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
+        d1.stop();
+        d1.prepare();
     }
 
-    public void playD2(View view){
+    public void playD2(View view) throws IOException {
         // code to produce sound when right drum is clicked
-        MediaPlayer d2 = MediaPlayer.create(getApplicationContext(), R.raw.bass);
         d2.start();
+        try {
+            Thread.sleep(500);
+        }
+        catch(InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
+        d2.stop();
+        d2.prepare();
     }
 }
